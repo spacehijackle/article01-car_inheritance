@@ -25,12 +25,12 @@ public class Dashboard
         System.out.printf
         (
             "動力源: %s%n空調Mode: %s%n走行距離: %s %.0fkm%n動力残量: %s %.2f%%%n",
-            car.power.powerSource(),
+            car.power().powerSource(),
             car.mode(),
             visualizeRatio(mileage, distanceToGo),
             (double)mileage,
-            visualizeRatio(car.power.remains(), car.power.capacity()),
-            (car.power.remains() / car.power.capacity()) * 100.0d
+            visualizeRatio(car.power().remains(), car.power().capacity()),
+            (car.power().remains() / car.power().capacity()) * 100.0d
         );
     }
 
