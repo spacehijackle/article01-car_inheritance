@@ -43,7 +43,7 @@ public class ElectricMotor extends MotivePower
 	{
 		var consumptionRate = switch(mode)
 		{
-			case OFF    -> initConsumptionRate;
+			case OFF     -> initConsumptionRate;
 			case HEATING -> initConsumptionRate * 0.8d;  // ヒーターONで20%悪化
 		};
 
