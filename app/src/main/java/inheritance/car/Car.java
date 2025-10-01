@@ -23,8 +23,8 @@ public final class Car
 		this.power = power;
 	}
 
-	/** 動力源のプロパティを返す。*/
-	public RefMotivePower power() { return new RefMotivePower(); }
+	/** 動力源のクローンを返す。*/
+	public MotivePower power() { return power.clone(); }
 
 	/** 空調モードを返す。*/
 	public ACMode mode() { return mode; }
@@ -61,20 +61,5 @@ public final class Car
             // 動力源が空なら終了
 			if(power.isEmpty()) break;
 		}
-	}
-
-	/**
-	 * 動力源のプロパティ（参照のみ）提供クラス
-	 */
-	public class RefMotivePower
-	{
-		/** 動力源の名称を返す。*/
-		public String powerSource() { return power.powerSource(); }
-
-		/** 動力源の容量を返す。*/
-		public double capacity() { return power.capacity(); }
-
-		/** 動力源の残量を返す。*/
-		public double remains() { return power.remains(); }
 	}
 }
