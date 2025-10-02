@@ -7,8 +7,8 @@ import java.util.function.BiConsumer;
  */
 public final class Car
 {
-    /** 動力源 */
-	private final MotivePower power;
+    /** 動力源（直接公開で {@code MotivePower} の属性変更が嫌ならクローン提供メソッド作成）*/
+	public final MotivePower power;
 
 	/** 空調モード */
 	private ACMode mode = ACMode.OFF;
@@ -22,9 +22,6 @@ public final class Car
 	{
 		this.power = power;
 	}
-
-	/** 動力源のクローンを返す。*/
-	public MotivePower power() { return power.clone(); }
 
 	/** 空調モードを返す。*/
 	public ACMode mode() { return mode; }

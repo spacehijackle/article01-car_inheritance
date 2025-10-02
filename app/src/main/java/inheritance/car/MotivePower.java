@@ -5,7 +5,7 @@ package inheritance.car;
  * 
  * @apiNote このクラスを継承し、具体的な動力源を実装する。
  */
-public abstract class MotivePower implements Cloneable
+public abstract class MotivePower
 {
     /** 容量 */
     private final double capacity;
@@ -94,14 +94,4 @@ public abstract class MotivePower implements Cloneable
 
     /** モード変更イベント処理 */
     protected abstract void onModeChanged(ACMode mode);
-
-    @Override
-    protected MotivePower clone()
-    {
-        try
-        {
-            return (MotivePower)super.clone();
-        }
-        catch(CloneNotSupportedException ex) { throw new InternalError(ex.toString()); }
-    }
 }
