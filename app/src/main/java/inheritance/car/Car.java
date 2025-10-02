@@ -7,7 +7,7 @@ import java.util.function.BiConsumer;
  */
 public final class Car
 {
-    /** 動力源（直接公開で {@code MotivePower} の属性変更が嫌ならクローン提供メソッド作成）*/
+    /** 動力源 */
 	public final MotivePower power;
 
 	/** 空調モード */
